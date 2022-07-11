@@ -55,6 +55,8 @@ a {
 
 .a {
     text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
 }
 
 li {
@@ -199,7 +201,7 @@ padding-top: 16px;
 }
 
 .about-me__info--para {
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom: 28px;
     animation: fade-up 650ms 400ms backwards;
 }
@@ -210,6 +212,15 @@ padding-top: 16px;
     text-decoration: none;
     padding: 0 16px;
     animation: fade-up 650ms 400ms backwards;
+}
+
+.about-me__links {
+    animation: fade-up 650ms 800ms backwards;
+}
+
+.about-me__img {
+    animation: fade-in 1200ms 800ms backwards;
+    width: 100%;
 }
 
 @keyframes fade-up {
@@ -230,8 +241,32 @@ padding-top: 16px;
 }
 
 .about-me__info {
+    animation: fade-in 1200ms 800ms backwards;
     width: 100%;
 }
+
+.wave {
+    display: inline-block;
+animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+    0% {transform: rotate(0);
+    }
+    50% {transform: rotate(30deg);
+    }
+    100% {transform: rotate(0);}
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        }
+
+    100% {
+        opacity: 1;
+        }        
+    }
 
 /* TECH - STACK */
 
